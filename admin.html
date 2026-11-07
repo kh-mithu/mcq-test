@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MCQ Test - Admin Results</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="card admin-card">
+    <!-- Login overlay -->
+    <div id="adminLogin" class="login-overlay">
+      <div class="login-box">
+        <h2>Admin Login</h2>
+        <div class="form-group">
+          <label for="adminPassword">Password</label>
+          <input type="password" id="adminPassword" placeholder="Enter admin password">
+        </div>
+        <button id="adminLoginBtn" class="btn btn-primary">Login</button>
+        <div id="adminLoginError" class="error" style="display:none;color:#dc2626;margin-top:10px;">Invalid password</div>
+      </div>
+    </div>
+
+    <!-- Admin content (hidden until logged in) -->
+    <div id="adminContent" style="display:none;">
+      <div class="admin-header">
+        <h1>Admin - Results</h1>
+        <div class="admin-actions">
+          <button id="clearResults" class="btn btn-danger">Clear All Results</button>
+          <button id="adminLogout" class="btn btn-outline">Logout</button>
+          <a href="index.html" class="btn btn-outline">Back to Exam</a>
+        </div>
+      </div>
+      <p class="muted">Stored results (client-side localStorage).</p>
+      <div class="table-wrap" id="resultsTableWrap">
+        <table id="resultsTable">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Score</th>
+              <th>Total</th>
+              <th>Percentage</th>
+              <th>Time Taken</th>
+              <th>Submitted At</th>
+            </tr>
+          </thead>
+          <tbody id="resultsBody"></tbody>
+        </table>
+      </div>
+      <div id="noResults" class="empty" style="display:none;">No results yet.</div>
+    </div>
+  </div>
+</div>
+<script src="admin.js"></script>
+</body>
+</html>

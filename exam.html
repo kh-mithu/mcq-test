@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MCQ Test - Exam</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="card exam-card">
+    <div class="exam-header">
+      <div class="student-info" id="studentInfo"></div>
+      <div class="timer-box">
+        <span id="timer">Time left: <b id="timeDisplay">10:00</b></span>
+      </div>
+    </div>
+
+    <div class="progress" id="progress">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <div class="question-container" id="questionContainer">
+      <div class="loading">Loading exam...</div>
+    </div>
+
+    <div class="nav-controls" id="navControls" style="display:none;">
+      <button id="nextBtn" class="btn btn-primary">Next &rarr;</button>
+    </div>
+
+    <div id="timeUp" class="alert alert-warning" style="display:none;">
+      Time is up! Your exam has been submitted automatically.
+    </div>
+  </div>
+</div>
+<script src="questions.js"></script>
+<script src="exam.js"></script>
+</body>
+</html>
